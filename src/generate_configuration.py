@@ -9,9 +9,10 @@ d2r = pi / 180
 r2d = 180 / pi
 
 shape_config = {
+    'resin': False,
 
-    'ENGINE': 'solid',  # 'solid' = solid python / OpenSCAD, 'cadquery' = cadquery / OpenCascade
-    # 'ENGINE': 'cadquery',  # 'solid' = solid python / OpenSCAD, 'cadquery' = cadquery / OpenCascade
+    # 'ENGINE': 'solid',  # 'solid' = solid python / OpenSCAD, 'cadquery' = cadquery / OpenCascade
+    'ENGINE': 'cadquery',  # 'solid' = solid python / OpenSCAD, 'cadquery' = cadquery / OpenCascade
 
 
     ######################
@@ -23,11 +24,11 @@ shape_config = {
     'overrides': "",
     'save_name': "",
     "logo_file": None,
-    'show_caps': True,
+    'show_caps': False,
     'show_pcbs': False, #only runs if caps are shown, easist place to initially inject geometry
 
-    'nrows':  5, #5,  # key rows
-    'ncols':  6, #6,  # key columns
+    'nrows':  4, #5,  # key rows
+    'ncols':  5, #6,  # key columns
 
     'alpha':  pi / 12.0,  # curvature of the columns
     'beta':  pi / 36.0,  # curvature of the rows
@@ -117,7 +118,7 @@ shape_config = {
     # END EXPERIMENTAL
 
     'trackball_Usize': 1.5,  # size for inner key near trackball
-    'ball_side': 'right', #'left', 'right', or 'both'
+    'ball_side': 'both', #'left', 'right', or 'both'
     'ball_diameter': 34.0,
     'ball_wall_thickness': 3,  # should not be changed unless the import models are changed.
     'ball_gap': 1.0,
@@ -440,7 +441,7 @@ def save_config():
             json.dump(shape_config, fid, indent=4)
 
     else:
-        with open(os.path.join(r".", 'run_config.json'), mode='w') as fid:
+        with open(os.path.join(r"./src", 'run_config.json'), mode='w') as fid:
             json.dump(shape_config, fid, indent=4)
 
 
