@@ -23,7 +23,7 @@
         -3,
         7
     ],
-    "full_last_rows": false,
+    "full_last_rows": true,
     "keyboard_z_offset": 11,
     "thumb_style": "TRACKBALL_ORBYL",
     "default_1U_cluster": true,
@@ -120,6 +120,16 @@
     "tbcj_inner_diameter": 42,
     "tbcj_thickness": 2,
     "tbcj_outer_diameter": 53,
+    "tb_btu_socket_translation_offset": [
+        0,
+        0,
+        0
+    ],
+    "tb_btu_socket_rotation_offset": [
+        0,
+        0,
+        0
+    ],
     "trackball_modular": false,
     "trackball_Usize": 1.5,
     "ball_side": "both",

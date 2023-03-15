@@ -43,7 +43,7 @@ shape_config = {
     'column_style':  "standard",  # options include :standard, :orthographic, and :fixed
 
     'thumb_offsets':  [6, -3, 7],
-    'full_last_rows': False,
+    'full_last_rows': True,
     'keyboard_z_offset':  (
         11  # controls overall height# original=9 with centercol=3# use 16 for centercol=2
     ),
@@ -109,6 +109,8 @@ shape_config = {
     'tbcj_thickness': 2,
     'tbcj_outer_diameter': 53,
 
+    'tb_btu_socket_translation_offset': (0, 0, 0),
+    'tb_btu_socket_rotation_offset': (0, 0, 0),
 
     ###################################
     ## Trackball General             ##

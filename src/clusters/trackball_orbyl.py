@@ -113,7 +113,7 @@ class TrackballOrbyl(DefaultCluster):
         t_off = self.key_translation_offsets[0]
         shape = rotate(shape, self.key_rotation_offsets[0])
         shape = translate(shape, (t_off[0], t_off[1] + self.key_diameter / 2, t_off[2]))
-        shape = rotate(shape, [0,0,-80])
+        shape = rotate(shape, [0,0,-90])
         shape = self.track_place(shape)
 
         return shape
@@ -133,7 +133,7 @@ class TrackballOrbyl(DefaultCluster):
         shape = rotate(shape, self.key_rotation_offsets[2])
         t_off = self.key_translation_offsets[2]
         shape = translate(shape, (t_off[0], t_off[1]+self.key_diameter/2, t_off[2]))
-        shape = rotate(shape, [0,0,-180])
+        shape = rotate(shape, [0,0,-170])
         shape = self.track_place(shape)
 
         return shape
@@ -144,7 +144,7 @@ class TrackballOrbyl(DefaultCluster):
         shape = rotate(shape, self.key_rotation_offsets[3])
         t_off = self.key_translation_offsets[3]
         shape = translate(shape, (t_off[0], t_off[1]+self.key_diameter/2, t_off[2]))
-        shape = rotate(shape, [0,0,-230])
+        shape = rotate(shape, [0,0,-210])
         shape = self.track_place(shape)
 
         return shape
@@ -405,9 +405,9 @@ class TrackballOrbyl(DefaultCluster):
         shape = union(hulls)
         return shape
 
-    # def screw_positions(self):
-    #     position = self.thumborigin()
-    #     position = list(np.array(position) + np.array([-72, -40, -16]))
-    #     position[2] = 0
-    #
-    #     return position
+    def screw_positions(self):
+        position = self.thumborigin()
+        position = list(np.array(position) + np.array([-20, -63, -16]))
+        position[2] = 0
+    
+        return position
